@@ -1,0 +1,22 @@
+<button type='submit'(click)= "Clickdata()">{{data?'Hide':'Show'}}</button>
+ <h1 style="color: red" *ngIf="data">{{name}}</h1> 
+<table *ngIf='data' border=3>
+    <tr >
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Contact</th>
+      
+    </tr>
+    <tr *ngFor='let c of student'> 
+        <td>{{c.id}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.address}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.contact}}</td>
+    </tr>
+</table>
+<ul *ngFor='let b of student'>
+    <li>{{b.id}}---{{b.name}}----{{b.address}}---{{b.email}}---{{b.contact}}</li>
+</ul>

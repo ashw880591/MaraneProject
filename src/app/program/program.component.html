@@ -1,0 +1,23 @@
+
+<button type="submit" (click)="Clickdata()">show</button>
+<h1 [ngStyle]="cls" *ngIf=a>{{name}}</h1>
+
+<table *ngIf=a>
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Address</td>
+    </tr>
+        <tr *ngFor= 'let s of record'>
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.address}}</td>
+        
+        <ol *ngFor='let b of record'>
+            <ul>
+                <li>{{b.id}}--{{b.name}}---{{b.address}}</li>
+            </ul>
+
+        </ol>
+    </tr>
+</table>

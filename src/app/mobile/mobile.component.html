@@ -1,0 +1,25 @@
+<h1 *ngIf="data">Component Example</h1>
+
+<table border="3"> 
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let a of student">
+        <td>{{a.id}}</td>
+        <td>{{a.name}}</td>
+        <td>{{a.city}}</td>
+        <td>{{a.email}}</td>
+    </tr>
+</table>
+<hr><hr>
+
+<div [ngSwitch]="display">
+    <h3 *ngSwitchCase="'a'">Switch Case A</h3>
+    <h3 *ngSwitchCase="'b'">Switch Case B</h3>
+    <h3 *ngSwitchCase="'c'">Switch Case C</h3>
+</div>
+
+<h1>Cube of Number {{number}} is {{number|helo}}</h1>

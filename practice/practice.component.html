@@ -1,0 +1,32 @@
+<button type ="submit" (click)="Clickdata()">Show</button>
+<h1 [ngStyle]="cls" *ngIf=a>Elixir Classes</h1>
+<table border=2 *ngIf="a">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Roll_No</th>
+        <th>Subject</th>
+       
+    </tr>
+    <tr *ngFor="let s of StudentRecord">
+        <td>{{s.id}}</td>
+        <td>{{s.name}}</td>
+        <td>{{s.roll_no}}</td>
+        <td>{{s.subject}}</td>
+        
+    </tr>
+</table>
+<hr>
+<div [ngSwitch]='display'>
+    <h1 *ngSwitchCase="'a'">Switch Case A Display</h1>
+    <h1 *ngSwitchCase="'b'">Switch Case B Display</h1>
+    <h1 *ngSwitchCase="'c'">Switch Case C Display</h1>
+
+</div>
+<ol *ngFor="let b of StudentRecord">
+    <ul>
+    <li>{{b.id}}---{{b.name}}---{{b.roll_no}}---{{b.subject}}</li>
+    
+</ul>
+</ol>
+{{amount | currency:'INR'}}

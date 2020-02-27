@@ -1,0 +1,32 @@
+<br><br>
+<button type="button" (click)="clickdata()">{{show?'Hide':'Show'}}</button>
+<br><br>
+
+<h1 style="color: pink" *ngIf="show"> WelCome Angular </h1>
+
+
+<table *ngIf="show">
+    <tr>
+        <th>ID</th>
+        <th>Roll_No</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact</th>
+        <th>email_id</th>
+        
+    </tr>
+    <tr *ngFor="let A of student">
+        <td>{{A.id}}</td>
+        <td>{{A.roll_no}}</td>
+        <td>{{A.name}}</td>
+        <td>{{A.address}}</td>
+        <td>{{A.contact}}</td>
+        <td>{{A.email_id}}</td>
+        
+    </tr>
+</table>
+
+<br><hr><hr>
+<ul *ngFor="let B of student">
+    <li >{{B.id}} ---{{B.roll_no}} --- {{B.name}} --- {{B.addess}} --- {{B.contact}}--- {{B.email_id}}</li>
+</ul>

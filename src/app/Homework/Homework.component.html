@@ -1,0 +1,32 @@
+<button type="submit" (click)="getdata()"> SHOW</button>
+
+<h1 [ngStyle]="cls" *ngIf=a>Example of Component</h1>
+<table *ngIf="a">
+    <tr>
+        <th>ID</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>Address</th>
+    </tr>
+    <tr *ngFor="let s of student">
+        <td>{{s.id}}</td>
+        <td>{{s.fname}}</td>
+        <td>{{s.lname}}</td>
+        <td>{{s.address}}</td>
+        
+    </tr>
+</table>
+
+<ul *ngFor="let s of student">
+    <li>{{s.id}}  ---  {{s.fname}}  ---  {{s.lname}}  ---  {{s.address}}   </li>
+</ul>
+Enter Case =<input type="text"><h1>case</h1> 
+<div [ngSwitch]="case">
+<h2 *ngSwitchCase="'a'">Case 1</h2>
+<h2 *ngSwitchCase="'b'">Case 2</h2>
+<h2 *ngSwitchCase="'c'">Case 3</h2>
+</div><br><hr><hr>
+<h1>Name - {{name | titlecase}}
+    <!-- <br>{{name | uppercase}} <br>{{name | lowercase}}-->
+    <br> {{amount | currency:'INR'}} 
+</h1>

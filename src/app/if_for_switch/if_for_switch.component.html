@@ -1,0 +1,36 @@
+
+<h1 *ngIf="a">{{name}}</h1>
+<table border=2>
+    <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>ADDRESS</th>
+        <th>CONTACT</th>
+    </tr>
+        <tr *ngFor='let a of stud'>
+            <td>{{a.id}}</td>
+            <td>{{a.name}}</td>
+            <td>{{a.address}}</td>
+            <td>{{a.contact}}</td>
+        </tr>
+</table>
+<hr>
+<div [ngSwitch]="Show">
+    <h1 *ngSwitchCase="'1'">Switch case A</h1>
+    <h1 *ngSwitchCase="'2'"></h1>
+    <h1 *ngSwitchCase="'3'"></h1>
+
+</div>
+<h1>Square of number{{number}} is {{number | square}}</h1>
+<hr>
+<h1>Cube of number{{number}} is {{number | cube}}</h1>
+<hr>
+<h1>Addition of two number{{number}} is {{number | addition}}</h1>
+<hr>
+<h1>Subtraction of two number{{number}} is {{number | subtraction}}</h1>
+<hr>
+<h1>Multiplication of two number{{number}} is {{number | multiplication}}</h1>
+<hr>
+<h1>Divion of two number{{number}} is {{number | division}}</h1>
+
+{{stud|json}}
